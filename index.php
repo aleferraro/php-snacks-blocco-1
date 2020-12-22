@@ -55,9 +55,32 @@ $matches = [
 
 echo "<strong>PHP Snack 1</strong><br>";
 
+echo "<br>";
+
 for ($i = 0; $i < 5; $i++){
     echo $matches[$i]['casa'] . " - " . $matches[$i]['ospite'] . " | " . $matches[$i]['punteggio_casa'] . " - " . $matches[$i]['punteggio_ospite'] . "<br>";
-}
+};
+
+
+
+// PHP Snack 2
+
+$name = $_GET['name'];
+$mail = $_GET['mail'];
+$age = $_GET['age'];
+
+echo "<br><strong>PHP Snack 2</strong><br>";
+
+echo "<br><strong>Data Access</strong><br><p><strong>Name: </strong>" . $name . "<br><strong>Mail: </strong>" . $mail . "<br><strong>Age: </strong>" . $age . "<br>";
+
+echo "<br>";
+
+if ((strlen($name) >= 3) && (strpos($mail, ".")) && (strpos($mail, "@")) && ($age != NAN)){
+    echo "Accesso riuscito";
+} else {
+    echo "Accesso negato";
+};
+
 
 
 ?>

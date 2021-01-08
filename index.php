@@ -57,7 +57,7 @@ echo "<strong>PHP Snack 1</strong><br>";
 
 echo "<br>";
 
-for ($i = 0; $i < 5; $i++){
+for ($i = 0; $i < count($matches); $i++){
     echo $matches[$i]['casa'] . " - " . $matches[$i]['ospite'] . " | " . $matches[$i]['punteggio_casa'] . " - " . $matches[$i]['punteggio_ospite'] . "<br>";
 };
 
@@ -75,7 +75,7 @@ echo "<br><strong>Data Access</strong><br><p><strong>Name: </strong>" . $name . 
 
 echo "<br>";
 
-if ((strlen($name) >= 3) && (strpos($mail, ".")) && (strpos($mail, "@")) && ($age != NAN)){
+if ((strlen($name) >= 3) && (strpos($mail, ".")) && (strpos($mail, "@")) && (is_numeric($age))){
     echo "Accesso riuscito";
 } else {
     echo "Accesso negato";
